@@ -1,36 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EduLearn LMS - Home</title>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduLearn LMS - Computer Engineering School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f0f8ff, #e6f7ff);
+      color: #333;
+    }
+    header, footer {
+      background-color: #003366;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background-color: #0059b3;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #0073e6;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #0059b3;
+    }
+    section {
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      background-color: #ffffffaa;
+    }
+    .colored-text {
+      color: #0073e6;
+    }
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+    .footer-links a {
+      color: #ffcc00;
+      margin: 0 10px;
+      text-decoration: underline;
+    }
+    .platform-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .platform-tabs a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background-color: #ccf2ff;
+      border: 1px solid #66c2ff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #003366;
+      transition: background-color 0.3s;
+      flex: 1 0 200px;
+      text-align: center;
+    }
+    .platform-tabs a:hover {
+      background-color: #b3e6ff;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to EduLearn LMS</h1>
-    <nav>
-      <ul>
-        <li><a href="pages/login.html">Login</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
-        <li><a href="pages/departments.html">Departments</a></li>
-        <li><a href="pages/courses.html">Courses</a></li>
-        <li><a href="pages/library.html">Library</a></li>
-        <li><a href="pages/search.html">Search</a></li>
-      </ul>
-    </nav>
+    <h1 class="colored-text">EduLearn LMS</h1>
+    <p>Computer Engineering School Learning Management Portal</p>
   </header>
-  <main>
-    <section>
-      <h2>EduLearn Computer Engineering School</h2>
-      <p>Welcome to the future of learning! Explore our courses, departments, and student platforms.</p>
-      <img src="assets/images/campus.jpg" alt="School Campus" style="width:100%;max-width:600px;"/>
-    </section>
-  </main>
+  <nav>
+    <a href="#login">Login</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#departments">Departments</a>
+    <a href="#courses">Courses</a>
+    <a href="#library">Library</a>
+    <a href="#search">Search</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to EduLearn LMS</h2>
+    <p>Empowering future computer engineers through interactive learning and professional resources.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>EduLearn LMS is a modern platform tailored for the computer engineering department, offering dynamic online education solutions.</p>
+  </section>
+
+  <section id="departments">
+    <h2>Departments</h2>
+    <ul>
+      <li>Hardware Engineering</li>
+      <li>Software Engineering</li>
+      <li>Network Systems</li>
+      <li>Cybersecurity</li>
+    </ul>
+  </section>
+
+  <section id="courses">
+    <h2>Courses</h2>
+    <div class="responsive-grid">
+      <div>
+        <h3>Current Running Courses</h3>
+        <ul><li>Embedded Systems</li><li>Data Structures</li></ul>
+      </div>
+      <div>
+        <h3>Upcoming Courses</h3>
+        <ul><li>AI in Engineering</li><li>IoT Systems</li></ul>
+      </div>
+    </div>
+    <a href="#registration">Register for Courses</a>
+  </section>
+
+  <section id="registration">
+    <h2>Course Registration</h2>
+    <form>
+      <label>Full Name:<input type="text" required></label><br>
+      <label>Email:<input type="email" required></label><br>
+      <label>Select Course:<select><option>Embedded Systems</option><option>IoT Systems</option></select></label><br>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Course Requirements</h2>
+    <ul><li>Valid Student ID</li><li>Completed Prerequisite Courses</li></ul>
+  </section>
+
+  <section>
+    <h2>Testimonials</h2>
+    <blockquote>“EduLearn gave me the tools to excel in my engineering career.” - Jane Doe</blockquote>
+  </section>
+
+  <section>
+    <h2>School History</h2>
+    <p>Founded in 2001, the school has grown to become a center of excellence in engineering education.</p>
+  </section>
+
+  <section>
+    <h2>Board of Directors</h2>
+    <ul><li>Dr. John Smith</li><li>Prof. Ada Lovelace</li></ul>
+  </section>
+
+  <section>
+    <h2>School Overview</h2>
+    <p>EduLearn LMS is part of the Computer Engineering Faculty and provides a full range of services for students online and offline.</p>
+  </section>
+
+  <section>
+    <h2>School Gallery</h2>
+    <img src="https://via.placeholder.com/400x200" alt="School Image">
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul><li>Robotics Research</li><li>Smart Campus Automation</li></ul>
+  </section>
+
+  <section>
+    <h2>Location</h2>
+    <iframe src="https://maps.google.com/maps?q=MIT&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <section>
+    <h2>Social Media</h2>
+    <p>Follow us: 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">LinkedIn</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <ul>
+      <li><a href="#">Favorite Courses</a></li>
+      <li><a href="#">School Resources</a></li>
+      <li><a href="#">Online Programs</a></li>
+      <li><a href="#">Upcoming Courses</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Platforms</h2>
+    <div class="platform-tabs">
+      <a href="exam.html" target="_blank">Examination Platform</a>
+      <a href="teaching.html" target="_blank">Online Teaching Platform</a>
+      <a href="survey.html" target="_blank">Survey Platform</a>
+      <a href="journal.html" target="_blank">School Journal & Magazines</a>
+      <a href="report.html" target="_blank">Student Report Panel</a>
+      <a href="certificate.html" target="_blank">Certificate Generation</a>
+      <a href="attendance.html" target="_blank">Attendance Mentoring</a>
+      <a href="criteria.html" target="_blank">Registration Criteria</a>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 EduLearn LMS | Powered by EduTech</p>
+    <p>&copy; 2025 EduLearn LMS | Powered by Computer Engineering Dept.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Help</a>
+    </div>
   </footer>
 </body>
 </html>
